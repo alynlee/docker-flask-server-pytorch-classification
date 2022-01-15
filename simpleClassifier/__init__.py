@@ -5,10 +5,15 @@
 
 
 from flask import Flask
+from .model import model
+import sys
 
 
 def create_app():
     app = Flask(__name__)
+
+    # for deeplearning model
+    model.init()
 
     from .views import main_views
     app.register_blueprint(main_views.bp)
