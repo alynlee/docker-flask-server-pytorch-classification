@@ -7,5 +7,4 @@
 4. open another terminal
 5. in another terminal `python test.py`
 
-you can see reuslt 
-ex) {'class_id': 'n02504458', 'class_name': 'African_elephant'}
+result : {'class_id': 'n02504458', 'class_name': 'African_elephant'}
