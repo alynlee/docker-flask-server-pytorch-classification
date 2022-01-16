@@ -1,6 +1,6 @@
 # flask_model_serving_practice
 
-## Just execute app in local
+## Execute app in local
 1. in terminal `FLASK_APP=simpleClassifiler`
 2. Enter simpleClassifier folder
 3. in terminal `flask run`
