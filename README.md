@@ -15,3 +15,8 @@ result : {'class_id': 'n02504458', 'class_name': 'African_elephant'}
 2. `docker run -it -p 5000:5000 alynlee/flask-example`
 3. Open another terminal
 4. in another terminal `curl -X POST -F "file=@simpleClassifiler/img/elephant.jpeg" dockerIP:PORT/predict`
+
+result : {
+  "class_id": "n02504458", 
+  "class_name": "African_elephant"
+}
