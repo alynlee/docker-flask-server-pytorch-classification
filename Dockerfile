@@ -1,12 +1,10 @@
-FROM 
-#FROM python:3.8.5
+FROM python:3.8-slim
 
-# WORKDIR /usr/src/app
-# COPY ./ ./
-# RUN pip install -r requirements.txt
-# ENTRYPOINT export FLASK_APP=simpleClassifier
-# ENTRYPOINT export FLASK_ENV=development
-# EXPOSE 5000
+WORKDIR /usr/src/app
+COPY ./ ./
+RUN pip install -r requirements.txt
+ENV FLASK_APP=simpleClassifier
+ENV FLASK_ENV=development
+EXPOSE 5000
 
-#CMD ["flask", "run", "--host=0.0.0.0"]
-CMD ["echo", "-u" "hello"]
+CMD ["flask", "run", "--host=0.0.0.0"]

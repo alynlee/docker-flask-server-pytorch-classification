@@ -5,10 +5,13 @@
     # img가 아닌 다른 유형의 파일이 들어왔을때 예외처리
     # 모델이 이미지를 인식할 수 없을때 처리하는 구문 만들기
 
+#curl 명령어
+#curl -X POST -F "file=@./img/elephant.jpeg" dockerIP:PORT/predict
 
 import requests
 
 if __name__ == '__main__':
-    resp = requests.post("http://localhost:5000/predict",
-                         files={"file": open('./img/elephant.jpeg', 'rb')})
+    #resp = requests.post("http://localhost:5000/predict",files={"file": open('./img/elephant.jpeg', 'rb')})
+    resp = requests.post("http://172.17.0.3:5000/predict",files={"file": open('./img/elephant.jpeg', 'rb')})
     print(resp.json())
+
